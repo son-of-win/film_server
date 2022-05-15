@@ -1,0 +1,16 @@
+[
+  {
+    "name": "player-name",
+    "path": "/player/:name?",
+    "component": "C:\\\\Users\\\\Nguyen Huu Vuot\\\\Downloads\\\\Nuxt-Node-video-streaming\\\\frontend\\\\pages\\\\player\\\\_name.vue",
+    "chunkName": "pages/player/_name",
+    "_name": "_0a28390e"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Nguyen Huu Vuot\\\\Downloads\\\\Nuxt-Node-video-streaming\\\\frontend\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_4d703477"
+  }
+]
