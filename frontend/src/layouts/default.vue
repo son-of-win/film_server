@@ -1,9 +1,8 @@
-
 <template>
- <div>
-   <NavBar />
-   <nuxt />
- </div>
+    <div>
+        <NarBar />
+        <!-- <<router-link></router-link> -->
+    </div>
 </template>
 
 <script>
