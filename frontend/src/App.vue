@@ -28,13 +28,5 @@ head: {
       }
       this.videos = await result.json()
     },
-    // async fetch() {
-    //   this.videos = await fetch(
-    //     'http://localhost:5000/videos'
-    //   ).then((res) => {
-    //     console.log(res);
-    //     res.json()})
-    // }
-  
 }
 </script>

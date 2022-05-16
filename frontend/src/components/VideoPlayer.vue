@@ -1,19 +1,14 @@
 <template>
-<div>
   <div class="container" v-if="!isShowPlayer">
-    <div v-for="(video, id) in videoList" :key="id" :id="video.id" class="vid-con" @click="onClick($event)">
-        <div
-          :style="{
-            backgroundImage: `url(${video.poster})`
-          }"
-          class="vid"
-        ></div>
-        <div class="movie-info">
-          <div class="details">
-          <h2>{{video.name}}</h2>
-          <p>{{video.duration}}</p>
+    <div class="row">
+      <div v-for="(video, id) in videoList" :key="id" :id="video.id" class="col-md-3 col-sm-4 col-6 video-item" @click="onClick($event)">
+          <img :src="video.poster" class="img-fluid" video-image alt="...">
+          <div class="movie-info">
+            <div class="details">
+              <p>{{video.name}} - {{video.duration}}</p>
+            </div>
           </div>
-        </div>
+      </div>
     </div>
   </div>
   <div class="container playerVideo" v-if="isShowPlayer">
@@ -24,8 +19,7 @@
         </video>
     </div>
   </div>
-  
-</div>
+
 </template>
 
 <script>
@@ -39,7 +33,6 @@ export default {
     },
     methods:{
       onClick($event) {
-      console.log($event.currentTarget.id);
         this.isShowPlayer = !this.isShowPlayer;
         this.vidName = $event.currentTarget.id
       }
@@ -50,23 +43,17 @@ export default {
 <style scoped>
 .container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
-.vid-con{
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  justify-content: center;
-  width:50%;
-  max-width: 20%;
-  margin: auto 2em;
-  
+.video-item{
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
-.vid{
-  height:15rem;
-  width:100%;
+.video-image{
+  width:100%; 
   background-position: center;
   background-size: cover;
 }
@@ -74,6 +61,7 @@ export default {
   background: black;
   color:white;
   width:100%;
+  font-size: 18px;
 }
 .details{
   padding: 16px 20px;
