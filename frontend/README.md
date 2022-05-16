@@ -5,6 +5,10 @@
 yarn install
 ```
 
+### Config server
+```
+Change localhost in link by Server IP
+```
 ### Compiles and hot-reloads for development
 ```
 yarn serve

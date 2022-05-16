@@ -5,7 +5,7 @@
           <img :src="video.poster" class="img-fluid" video-image alt="...">
           <div class="movie-info">
             <div class="details">
-              <p>{{video.name}} - {{video.duration}}</p>
+              <p>{{video.name}} <br> {{video.duration}}</p>
             </div>
           </div>
       </div>
@@ -14,7 +14,7 @@
   <div class="container playerVideo" v-if="isShowPlayer">
     <div class="player">
         <video controls muted autoPlay crossOrigin="anonymous">
-            <source :src="`http://172.16.0.10:5000/videos/video/${vidName}`" type="video/mp4">
+            <source :src="`http://localhost:5000/videos/video/${vidName}`" type="video/mp4">
             <track label="English" kind="captions" srcLang="en" :src="`http://localhost:5000/videos/video/${vidName}/caption`" default>
         </video>
     </div>
@@ -64,7 +64,8 @@ export default {
   font-size: 18px;
 }
 .details{
-  padding: 16px 20px;
+  /* padding: 16px 20px; */
+  text-align:center;
 }
 .player{
     display: flex;
