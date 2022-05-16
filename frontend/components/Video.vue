@@ -1,26 +1,17 @@
 <template>
 <div>
   <div class="container">
-    <div
-    v-for="(video, id) in videoList"
-    :key="id"
-    class="vid-con"
-  >
-    <NuxtLink :to="`/player/${video.id}`">
-    <div
-      :style="{
-        backgroundImage: `url(${video.poster})`
-      }"
-      class="vid"
-    ></div>
-    <div class="movie-info">
-      <div class="details">
-      <h2>{{video.name}}</h2>
-      <p>{{video.duration}}</p>
-      </div>
+    <div v-for="(video, id) in videoList" :key="id" class="vid-con">
+      <NuxtLink :to="`/player/${video.id}`">
+        <div :style="{backgroundImage: `url(${video.poster})`}" class="vid"></div>
+        <div class="movie-info">
+          <div class="details">
+            <h2>{{video.name}}</h2>
+            <p>{{video.duration}}</p>
+          </div>
+        </div>
+      </NuxtLink>
     </div>
-  </NuxtLink>
-  </div>
   </div>
 </div>
 </template>
