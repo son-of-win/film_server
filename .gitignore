@@ -3,7 +3,7 @@ node_modules
 .vscode
 .nuxt
 /dist
-
+*.mp4
 
 # local env files
 .env.local
