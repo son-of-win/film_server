@@ -1,4 +1,4 @@
-## Nuxt and Node Streaming Application
+## Vue and Node Streaming Application
 
 ## Các cài đặt
 * các file video .mp4 sẽ được lưu ở thư mục /backend/assets
